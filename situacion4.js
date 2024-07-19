@@ -8,12 +8,12 @@ un único número par (sin decimales ni signo).*/
 
 let Cadena = prompt("Escribe algo:");
 
-const resultado = (cadena) => {
+const resultado = cadena => {
     const palabraUnica = /^[a-zA-Z]+$/i;
     const dosPalabras = /^[a-zA-Z]\s+[a-zA-Z]+$/i;
     const vocales = /^a+e+i+o+u+$/;
     const unicoNumero = /^[0-9]+/;
-    const numeroPar = /^[02468]\d*/;
+    const numeroPar = /^[0-9]+[02468]\d*/;
 
     if (vocales.test(cadena)) {
         alert("Lo que escribiste son vocales en orden alfabético!")

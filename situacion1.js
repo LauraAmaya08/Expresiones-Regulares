@@ -5,16 +5,22 @@ Debe contener al menos una letra minúscula.
 Debe contener al menos una letra mayúscula.
 Debe contener al menos un número.*/
 
-let contraseña;
-const mensajeError = "Recuerda, la contraseña debe tener al menos 8 caracteres, 1 mayúscula, 1 minúscula y un número :)";
-const formatoCorrecto = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
-do {
-    contraseña = prompt("Ingresa tu contraseña");
+const validar = contraseña => {
+    const mensajeError = "Recuerda, la contraseña debe tener al menos 8 caracteres, 1 mayúscula, 1 minúscula y un número :)";
+    const formatoCorrecto = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
-    if (!formatoCorrecto.test(contraseña)) {
-        alert(mensajeError);
-    }
-} while (!formatoCorrecto.test(contraseña));
+    do {
+        contraseña = prompt("Ingresa tu contraseña");
 
-alert("Contraseña aceptada!")
+        if (!formatoCorrecto.test(contraseña)) {
+            alert(mensajeError);
+        }
+    } while (!formatoCorrecto.test(contraseña));
+
+    return alert("Contraseña aceptada!")
+
+}
+
+let Contraseña;
+validar(Contraseña)
